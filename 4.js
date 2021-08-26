@@ -4,19 +4,6 @@
 
 // [10, 343445353, 3453445, 3453545353453] should return 3453455.
 
-function duplicateEncode(word) {
-  let expectedArray = [];
-  let casedWord = word.toLowerCase();
-  let newArray = casedWord.split('');
-
-  for (let el = 0; el < newArray.length; el++) {
-    let x = newArray.lastIndexOf(newArray[el]);
-    let y = newArray.indexOf(newArray[el]);
-    if (x === y) {
-      expectedArray.push('(');
-    } else {
-      expectedArray.push(')');
-    }
-  }
-  return expectedArray.join('');
+function sumTwoSmallestNumbers(numbers) {
+  return numbers.sort((a, b) => a - b)[0] + numbers.sort((a, b) => a - b)[1];
 }
