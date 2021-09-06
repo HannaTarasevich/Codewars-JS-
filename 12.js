@@ -30,9 +30,7 @@ function anagrams(word, words) {
       .join('');
   }
   for (let el in words) {
-    console.log(words[el]);
     sorting(word) == sorting(words[el]) ? expectedArray.push(words[el]) : false;
-    console.log(`${sorting(word)} IS EQUAL ${sorting(words[el])} ?`);
   }
   return expectedArray;
 }
